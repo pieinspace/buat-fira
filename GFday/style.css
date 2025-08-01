@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Comic+Neue:wght@700&display=swap');
+        
+        :root {
+            --primary: #ff6b9b;
+            --secondary: #ff94b6;
+            --accent: #ff4d88;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff5f9;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        .hero-title {
+            font-family: 'Comic Neue', cursive;
+            text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+        }
+        
+        .heart {
+            animation: float 4s ease-in-out infinite;
+        }
+        
+        .heart:nth-child(2) {
+            animation-delay: 1s;
+        }
+        
+        .heart:nth-child(3) {
+            animation-delay: 2s;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 60px 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transform: rotate(3deg);
+            transition: all 0.3s ease;
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+        }
+        
+        .max-h-80 {
+            max-height: 20rem;
+        }
+        
+        .text-stroke {
+            color: transparent;
+            -webkit-text-stroke: 1px white;
+            text-stroke: 1px white;
+        }
+        
+        .floating-stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            opacity: 0;
+            animation: twinkle 4s infinite;
+        }
+        
+        @keyframes twinkle {
+            0% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+        
+        .img-landing {
+            max-width: 250px;
+            max-height: 320px;
+            width: auto;
+            height: auto;
+        }
